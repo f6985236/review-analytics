@@ -42,6 +42,25 @@ for c in data: #把data清單中裡面每一行稱作d
 		good.append(c)
 print('一共有',len(good),'筆留言裡面有good!')
 
+#超級快寫法：
+#good = [ c for c in data if 'good' in c ]  就等於直接建立一個good清單，符合上述條件
+#good = [ 1 for c in data if 'good' in c ]  註意這邊的意思，是把符合條件有good的留言，把1裝進清單，print出good清單，就會變成兩萬多筆'1'
 
+print(good[0])
+
+#-----練習，建立一個bad，清單裝"1",然後算有幾筆
+
+bad = [1 for b in data if 'bad' in b]
+
+print(bad)
+print('一共有',len(bad),'筆留言裡面有bad')
+
+#-----練習檢驗清單裡有無bad，印出true or false!
+#hint:檢驗布林值問句： a in b 是個問句，問a有無在b裡
+
+
+worse = ['bad' in g for g in  data ]
+
+print(worse) #印出來就會是一百萬筆的true or false
 
 	
